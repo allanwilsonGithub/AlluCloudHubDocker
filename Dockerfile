@@ -5,6 +5,7 @@ MAINTAINER "Allan Wilson"
 LABEL name="Docker build AlluCloudHub"
 
 RUN apt-get update && apt-get install -y git && apt-get install -y wget && apt-get install unzip
+RUN apt-get install vim -y
 RUN mkdir /DATA/
 RUN mkdir /DATA/git
 RUN cd /DATA/git
