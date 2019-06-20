@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-docker build -t allu-cloud-hub .
+docker build -t allu-cloud-hub --build-arg CACHEBUST=$(date +%s) .
 
 time docker run \
            --net=host \

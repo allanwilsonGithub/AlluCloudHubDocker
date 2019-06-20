@@ -10,6 +10,7 @@ RUN mkdir /DATA/
 RUN mkdir /DATA/git
 RUN cd /DATA/git
 RUN chmod 777 /DATA/git
+ARG CACHEBUST=1
 RUN wget https://github.com/allanwilsonGithub/AlluCloudHub/archive/master.zip
 RUN cp master.zip /DATA/git
 WORKDIR "/DATA/git"
