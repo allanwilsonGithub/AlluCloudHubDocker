@@ -6,6 +6,7 @@ LABEL name="Docker build AlluCloudHub"
 
 RUN apt-get update && apt-get install -y git && apt-get install -y wget && apt-get install unzip
 RUN apt-get install vim -y
+RUN apt-get install -y net-tools
 RUN mkdir /DATA/
 RUN mkdir /DATA/git
 RUN cd /DATA/git
@@ -21,3 +22,4 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x  | bash -
 RUN apt-get install -y nodejs
 WORKDIR "/DATA/git/AlluCloudHub-master"
 RUN npm install
+EXPOSE 3000/tcp

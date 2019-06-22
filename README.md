@@ -7,7 +7,9 @@
 <p>docker run -it allu-cloud-hub bash</p>
 
 #get the internal IP with ifconfig
+<p>ifconfig</p>
 #update package.json with internal IP
+<p>vi package.json</p>
 #start the server on port 3000
 <p>npm run start</p>
 
