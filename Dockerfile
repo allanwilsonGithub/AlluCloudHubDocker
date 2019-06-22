@@ -21,7 +21,3 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x  | bash -
 RUN apt-get install -y nodejs
 WORKDIR "/DATA/git/AlluCloudHub-master"
 RUN npm install
-
-
-#get the internal IP with ifconfig
-#update package.json with internal IP
