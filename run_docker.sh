@@ -6,4 +6,5 @@ time docker run \
            --security-opt seccomp:unconfined \
            --shm-size "256M" \
            -p 3000:3000 \
-           allu-cloud-hub
+           allu-cloud-hub \
+           /bin/bash -c "scripts change_package_json_IP_to_local_IPV4.sh ; npm run start"

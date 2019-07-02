@@ -1,7 +1,15 @@
 # AlluHomeHub - Docker
 
+#from fresh AWS Ubuntu 18.04 instance
+sudo apt-get update
+sudo apt install docker.io -y
+sudo systemctl start docker
+
+#clone the repo
+git clone https://github.com/allanwilsonGithub/AlluCloudHubDocker.git
+
 #Build the docker image
-<p>./run_docker.sh</p>
+<p>sudo ./run_docker.sh</p>
 
 #ssh to Docker container
 <p>docker run -it allu-cloud-hub bash</p>
