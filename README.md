@@ -7,6 +7,7 @@ sudo systemctl start docker
 
 #clone the repo
 git clone https://github.com/allanwilsonGithub/AlluCloudHubDocker.git
+cd AlluCloudHubDocker
 
 #Build the docker image
 <p>sudo ./run_docker.sh</p>
