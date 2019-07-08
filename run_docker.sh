@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#docker build -t allu-cloud-hub --build-arg CACHEBUST=$(date +%s) .
+docker build -t allu-cloud-hub --build-arg CACHEBUST=$(date +%s) .
 
 docker run \
            --security-opt seccomp:unconfined \
