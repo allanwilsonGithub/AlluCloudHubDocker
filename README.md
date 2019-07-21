@@ -1,3 +1,13 @@
+# AlluHomeHub - Docker (using Terraform)
+
+#On local Ubuntu machine
+Install Terraform
+git clone https://github.com/allanwilsonGithub/AlluCloudHubDocker.git
+cd terraform
+terraform apply
+
+(the AWS IP address is given in the command line as an output. Just add :3000)
+
 # AlluHomeHub - Docker
 
 #from fresh AWS Ubuntu 18.04 instance
