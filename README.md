@@ -1,5 +1,8 @@
 # AlluHomeHub - Docker (using Terraform)
 
+#Allan's OneClick installer...
+../scripts/terraform_destroy_apply_dydns.sh
+
 #On local Ubuntu machine
 <p>Install Terraform</p>
 <p>git clone https://github.com/allanwilsonGithub/AlluCloudHubDocker.git</p>
@@ -33,5 +36,6 @@ cd AlluCloudHubDocker
 <p>npm run start</p>
 
 #create a rule to allow Tcp 3000 into the private IP
+
 
 #Test in public browser: http://<public_IP>:3000
