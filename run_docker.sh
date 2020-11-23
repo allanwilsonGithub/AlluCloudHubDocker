@@ -7,6 +7,6 @@ docker run \
     -t \
     --security-opt seccomp:unconfined \
     --shm-size "256M" \
-    -p 3000:3000 \
+    -p 80:80 \
     allu-cloud-hub \
     /bin/bash -c "chmod 777 scripts/change_package_json_IP_to_local_IPV4.sh && scripts/change_package_json_IP_to_local_IPV4.sh && npm start"

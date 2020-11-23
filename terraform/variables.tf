@@ -13,4 +13,3 @@ variable "instance_type" {
 variable "root_password" {
   default = "test"
 }
-

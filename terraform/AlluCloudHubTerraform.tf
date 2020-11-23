@@ -6,8 +6,8 @@ provider "aws" {
 resource "aws_security_group" "allow_3000" {
 
   ingress {
-    from_port       = 3000
-    to_port         = 3000
+    from_port       = 80
+    to_port         = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -27,7 +27,7 @@ resource "aws_security_group" "allow_3000" {
   }
 
   tags = {
-    Name = "allu_allow_3000"
+    Name = "allu_allow_80"
   }
 }
 
@@ -35,7 +35,7 @@ resource "aws_instance" "AlluCloudHubInstance" {
   ami           = var.ami
   instance_type = var.instance_type
   key_name = "AlluHomeHub1"
-  vpc_security_group_ids = ["${aws_security_group.allow_3000.id}"]
+  vpc_security_group_ids = ["sg-06b3f3e36969f0727"]
 
   provisioner "remote-exec" {
     inline = [
@@ -55,7 +55,8 @@ resource "aws_instance" "AlluCloudHubInstance" {
     host = self.public_ip
     type = "ssh"
     user = "ubuntu"
-    private_key = "${file("/DATA/certs/AlluHomeHub1.pem")}"
+    private_key = file("/DATA/certs/AlluHomeHub1.pem")
+
     }
   }
 }

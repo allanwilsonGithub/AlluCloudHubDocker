@@ -3,11 +3,18 @@
 #Allan's OneClick installer...
 ../scripts/terraform_destroy_apply_dydns.sh
 
-#On local Ubuntu machine
+#Deploy to AWS from local Ubuntu machine
 <p>Install Terraform</p>
 <p>git clone https://github.com/allanwilsonGithub/AlluCloudHubDocker.git</p>
 <p>cd terraform</p>
+<p>terraform init</p>
 <p>terraform apply</p>
+
+Add the private_key to = /DATA/certs/AlluHomeHub1.pem
+
+sudo apt install awscli
+aws configure
+AWS Access Key ID and Secret Access Key from AWS account WebUI
 
 <p>(the AWS IP address is given in the command line as an output. Just add :3000)</p>
 
