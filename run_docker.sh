@@ -9,4 +9,4 @@ docker run \
     --shm-size "256M" \
     -p 80:80 \
     allu-cloud-hub \
-    /bin/bash -c "chmod 777 scripts/change_package_json_IP_to_local_IPV4.sh && scripts/change_package_json_IP_to_local_IPV4.sh && npm start"
+    /bin/bash -c "chmod 777 scripts/change_package_json_IP_to_local_IPV4.sh && scripts/change_package_json_IP_to_local_IPV4.sh && PORT=80 npm start"
