@@ -30,5 +30,5 @@ WORKDIR "/DATA/git/AllanWilsonMinecraft"
 RUN chmod 777 start_minecraft.sh
 RUN pwd
 RUN ls -lah
-RUN start_minecraft.sh || true
+RUN ./start_minecraft.sh || true
 EXPOSE 25565/tcp
