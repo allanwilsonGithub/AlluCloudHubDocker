@@ -34,7 +34,7 @@ resource "aws_security_group" "allow_80_25565" {
   }
 
   tags = {
-    Name = "allu_allow_80_25565"
+    Name = "allow_80_25565"
   }
 }
 
@@ -42,7 +42,7 @@ resource "aws_instance" "AlluCloudHubInstance" {
   ami           = var.ami
   instance_type = var.instance_type
   key_name = "AlluHomeHub1"
-  vpc_security_group_ids = ["sg-0d75e8ef41908e254"]
+
 
   provisioner "remote-exec" {
     inline = [

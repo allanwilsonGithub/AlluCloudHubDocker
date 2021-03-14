@@ -22,7 +22,6 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x  | bash -
 RUN apt-get install -y nodejs
 WORKDIR "/DATA/git/AlluCloudHub-master"
 RUN npm install
-EXPOSE 80/tcp
 
 WORKDIR "/DATA/git"
 RUN apt install -y openjdk-8-jdk
@@ -32,4 +31,4 @@ RUN chmod 777 start_minecraft.sh
 RUN pwd
 RUN ls -lah
 RUN ./start_minecraft.sh
-EXPOSE 25565/tcp
+EXPOSE 25565 80
