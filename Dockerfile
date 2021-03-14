@@ -27,5 +27,5 @@ EXPOSE 80/tcp
 RUN git clone https://github.com/allanwilsonGithub/AllanWilsonMinecraft.git
 RUN cp -r AllanWilsonMinecraft /DATA/git
 WORKDIR "/DATA/git/AllanWilsonMinecraft"
-RUN ./start_minecraft.sh
+RUN start_minecraft.sh || true
 EXPOSE 25565/tcp
