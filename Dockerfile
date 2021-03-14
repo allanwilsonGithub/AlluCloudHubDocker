@@ -25,6 +25,7 @@ RUN npm install
 EXPOSE 80/tcp
 
 WORKDIR "/DATA/git"
+RUN apt install -y openjdk-8-jdk
 RUN git clone https://github.com/allanwilsonGithub/AllanWilsonMinecraft.git
 WORKDIR "/DATA/git/AllanWilsonMinecraft"
 RUN chmod 777 start_minecraft.sh
