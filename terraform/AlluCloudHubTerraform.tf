@@ -3,11 +3,18 @@ provider "aws" {
   region     = var.region
 }
 
-resource "aws_security_group" "allow_3000" {
+resource "aws_security_group" "allow_80_25565" {
 
   ingress {
     from_port       = 80
     to_port         = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
+    from_port       = 25565
+    to_port         = 25565
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -27,7 +34,7 @@ resource "aws_security_group" "allow_3000" {
   }
 
   tags = {
-    Name = "allu_allow_80"
+    Name = "allu_allow_80_25565"
   }
 }
 

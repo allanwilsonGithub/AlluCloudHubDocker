@@ -23,3 +23,9 @@ RUN apt-get install -y nodejs
 WORKDIR "/DATA/git/AlluCloudHub-master"
 RUN npm install
 EXPOSE 80/tcp
+
+RUN git clone https://github.com/allanwilsonGithub/AllanWilsonMinecraft.git
+RUN cp -r AllanWilsonMinecraft /DATA/git
+WORKDIR "/DATA/git/AllanWilsonMinecraft"
+RUN ./start_minecraft.sh
+EXPOSE 25565/tcp
