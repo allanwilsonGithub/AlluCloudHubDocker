@@ -27,7 +27,7 @@ WORKDIR "/DATA/git"
 RUN apt install -y openjdk-8-jdk
 RUN git clone https://github.com/allanwilsonGithub/AllanWilsonMinecraft.git
 WORKDIR "/DATA/git/AllanWilsonMinecraft"
-RUN chmod 777 start_minecraft.sh
+RUN chmod 777 start_minecraft_cloud.sh
 RUN pwd
 RUN ls -lah
 RUN ./start_minecraft_cloud.sh
