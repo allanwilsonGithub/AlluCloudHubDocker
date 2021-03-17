@@ -32,4 +32,3 @@ RUN pwd
 RUN ls -lah
 RUN ./start_minecraft_cloud.sh
 EXPOSE 25565 80
-RUN tail -f /dev/null

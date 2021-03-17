@@ -42,7 +42,7 @@ resource "aws_instance" "AlluCloudHubInstance" {
   ami           = var.ami
   instance_type = var.instance_type
   key_name = "AlluHomeHub1"
-
+  vpc_security_group_ids = [aws_security_group.allow_80_25565.id]
 
   provisioner "remote-exec" {
     inline = [
