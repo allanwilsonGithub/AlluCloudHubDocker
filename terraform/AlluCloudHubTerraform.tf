@@ -3,18 +3,11 @@ provider "aws" {
   region     = var.region
 }
 
-resource "aws_security_group" "allow_80_25565" {
+resource "aws_security_group" "allow_80" {
 
   ingress {
     from_port       = 80
     to_port         = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
-    from_port       = 25565
-    to_port         = 25565
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -34,7 +27,7 @@ resource "aws_security_group" "allow_80_25565" {
   }
 
   tags = {
-    Name = "allow_80_25565"
+    Name = "allow_80"
   }
 }
 
@@ -42,7 +35,7 @@ resource "aws_instance" "AlluCloudHubInstance" {
   ami           = var.ami
   instance_type = var.instance_type
   key_name = "AlluHomeHub1"
-  vpc_security_group_ids = [aws_security_group.allow_80_25565.id]
+  vpc_security_group_ids = [aws_security_group.allow_80.id]
 
   provisioner "remote-exec" {
     inline = [
